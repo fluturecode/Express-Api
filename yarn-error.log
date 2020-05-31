@@ -1,0 +1,31 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn init
+
+PATH: 
+  /Users/elizabetheidelson/.rbenv/shims:/Users/elizabetheidelson/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/elizabetheidelson/.rbenv/shims
+
+Yarn version: 
+  1.22.0
+
+Node version: 
+  12.14.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/elizabetheidelson/Desktop/wyncode/express_homework/package.json: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  
