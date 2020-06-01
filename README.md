@@ -1,56 +1,56 @@
-<!-- Project Title
-One Paragraph of project description goes here
+<!-- 
+Title
+<Additional information about your API call. Try to use verbs that match both request type (fetching vs modifying) and plurality (one vs multiple).>
 
-Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+URL
 
-Prerequisites
-What things you need to install the software and how to install them
+<The URL Structure (path only, no root url)>
 
-Give examples
-Installing
-A step by step series of examples that tell you how to get a development env running
+Method:
 
-Say what the step will be
+<The request type>
 
-Give the example
-And repeat
+GET | POST | DELETE | PUT
 
-until finished
-End with an example of getting some data out of the system or using it for a little demo
+URL Params
 
-Running the tests
-Explain how to run the automated tests for this system
+<If URL params exist, specify them in accordance with name mentioned in URL section. Separate into optional and required. Document data constraints.>
 
-Break down into end to end tests
-Explain what these tests test and why
+Required:
 
-Give an example
-And coding style tests
-Explain what these tests test and why
+id=[integer]
 
-Give an example
-Deployment
-Add additional notes about how to deploy this on a live system
+Optional:
 
-Built With
-Dropwizard - The web framework used
-Maven - Dependency Management
-ROME - Used to generate RSS Feeds
-Contributing
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+photo_id=[alphanumeric]
 
-Versioning
-We use SemVer for versioning. For the versions available, see the tags on this repository.
+Data Params
 
-Authors
-Billie Thompson - Initial work - PurpleBooth
-See also the list of contributors who participated in this project.
+<If making a post request, what should the body payload look like? URL Params rules apply here too.>
 
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details
+Success Response:
 
-Acknowledgments
-Hat tip to anyone whose code was used
-Inspiration
-etc -->
+<What should the status code be on success and is there any returned data? This is useful when people need to to know what their callbacks should expect!>
+
+Code: 200
+Content: { id : 12 }
+Error Response:
+
+<Most endpoints will have many ways they can fail. From unauthorized access, to wrongful parameters etc. All of those should be liste d here. It might seem repetitive, but it helps prevent assumptions from being made where they should be.>
+
+Code: 401 UNAUTHORIZED
+Content: { error : "Log in" }
+OR
+
+Code: 422 UNPROCESSABLE ENTRY
+Content: { error : "Email Invalid" }
+Sample Call:
+
+<Just a sample call to your endpoint in a runnable format ($.ajax call or a curl request) - this makes life easier and more predictable.>
+
+Notes:
+
+<This is where all uncertainties, commentary, discussion etc. can go. I recommend timestamping and identifying oneself when leaving comments here.>
+
+ EXAMPLE.md
+Show User -->

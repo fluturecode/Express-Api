@@ -3,7 +3,7 @@ const router = express.Router();
 
 let count = 0;
 router.put("/count", (req, res) => {
-  res.send({ message: "This route has been hit ${count} times." });
+  res.json({ message: "This route has been hit ${count++} times." });
 });
 
 router.delete("/reset", (req, res) => {
