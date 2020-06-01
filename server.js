@@ -12,7 +12,7 @@ app.use(cors());
 
 app.use("/", pingRoute);
 app.use("/", chuckRoute);
-app.use("/math", mathRoutes);
+app.use("/", mathRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port: ${PORT}`);
