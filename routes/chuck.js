@@ -3,7 +3,7 @@ const axios = require("axios");
 
 const router = express.Router();
 
-router.get("/chuck", async (req, res) => {
+router.get("/", async (req, res) => {
   const apiResponse = await axios.get(
     "https://api.chucknorris.io/jokes/random"
   );

@@ -1,56 +1,41 @@
-<!-- 
-Title
-<Additional information about your API call. Try to use verbs that match both request type (fetching vs modifying) and plurality (one vs multiple).>
+# BUILD AN EXPRESS API
 
-URL
+# Create an express server with the following endpoints:
 
-<The URL Structure (path only, no root url)>
+# ROUTES
 
-Method:
+# Routes/ping.js file add the following route:
 
-<The request type>
+# '/ping' This route should accept a GET request whose response is simply the string pong
 
-GET | POST | DELETE | PUT
+# In a routes/chuck.js file add the following route:
 
-URL Params
+# '/chuck' This route should accept a GET request whose response is a random Chuck Norris joke from the https://api.chucknorris.io/ API.
 
-<If URL params exist, specify them in accordance with name mentioned in URL section. Separate into optional and required. Document data constraints.>
+# In a routes/math.js file add the following routes:
 
-Required:
+# '/count' This route should accept a PUT request which updates a global count variable which keeps track of how many times this particular route has been hit. Every time a PUT request is sent to this route the count variable should increment by 1 and then the route should respond with an object { message: "This route has been hit \${count} times." }.
 
-id=[integer]
+# '/reset' This route should accept a DELETE request which resets the count variable and responds with the just the string The count has been reset.
 
-Optional:
+# '/sum' This route should accept a POST request in the req.body format, add 7 to it and then send the sum back in the following string: The sum of ${number} and 7 is ${number + 7}.
 
-photo_id=[alphanumeric]
+# '/subtract' This route should accept a GET request with a number in the req.query format, subtract 7 from it and then send back the following string: ${number} - 7 is ${number - 7}. (with the number from the request interpolated in the response, ie: 7 minus 7 is 0.)
 
-Data Params
+# FILE STRUCTURE
 
-<If making a post request, what should the body payload look like? URL Params rules apply here too.>
+# Follow this file structure https://wynbucket.nyc3.digitaloceanspaces.com/codio_images/folder_tree.png
 
-Success Response:
+# SCRIPTS & DEPENDENCIES
 
-<What should the status code be on success and is there any returned data? This is useful when people need to to know what their callbacks should expect!>
+# Use the "yarn start" script to run node server.js
 
-Code: 200
-Content: { id : 12 }
-Error Response:
+# Use the "yarn dev" script to run nodemon server.js
 
-<Most endpoints will have many ways they can fail. From unauthorized access, to wrongful parameters etc. All of those should be liste d here. It might seem repetitive, but it helps prevent assumptions from being made where they should be.>
+# Your API should allow CORS. (Run yarn add Cors)
 
-Code: 401 UNAUTHORIZED
-Content: { error : "Log in" }
-OR
+# Nodemon should be a devDependency.
 
-Code: 422 UNPROCESSABLE ENTRY
-Content: { error : "Email Invalid" }
-Sample Call:
+# ROUTES IN POSTMAN
 
-<Just a sample call to your endpoint in a runnable format ($.ajax call or a curl request) - this makes life easier and more predictable.>
-
-Notes:
-
-<This is where all uncertainties, commentary, discussion etc. can go. I recommend timestamping and identifying oneself when leaving comments here.>
-
- EXAMPLE.md
-Show User -->
+# Postman https://www.getpostman.com/collections/00094e1401e03cf2cf7a
